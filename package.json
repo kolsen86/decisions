@@ -1,0 +1,32 @@
+{
+  "name": "decisions",
+  "version": "1.0.0",
+  "description": "A social network that allows users to crowdsource any decisions, no matter how difficult the decision is.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kolsen86/decisions.git"
+  },
+  "author": "Kenneth Olsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kolsen86/decisions/issues"
+  },
+  "homepage": "https://github.com/kolsen86/decisions#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.0",
+    "mongoose": "^5.4.17",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}

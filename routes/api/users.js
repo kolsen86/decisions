@@ -4,6 +4,7 @@ const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const keys = require("../../config/keys.js");
+const passport = require("passport");
 
 // Load User Model
 
@@ -85,7 +86,18 @@ router.post("/login", (req, res) => {
                 return res.status(400).json({password: "Password Incorrect"});
             }
         });
-    })
-})
+    });
+});
+
+// GET api/users/current
+// Return Current User
+// @ access Private
+router.get("/current", passport.authenticate("jwt",{ session: false }), (req, res) => {
+    res.json({
+        id: req.user.id,
+        name: req.user.name,
+        email: req.user.email
+    });
+});
 
 module.exports = router;
